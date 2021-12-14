@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/tasks/edit/<%= Task.id %>" method="post">
+        <input name="name" type="text" placeholder="<%= Task.name %>">
+        <input name="description" type="text" placeholder="<%= Task.description %>">
+        <button type="submit">enviar</button>
+    </form>
+</body>
+</html>

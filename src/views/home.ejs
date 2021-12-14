@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/tasks" method="post">
+        <input name="name" type="text" placeholder="nombre">
+        <input name="description" type="text" placeholder="descripcion">
+        <button type="submit">enviar</button>
+    </form>
+
+    <% tasks.forEach(function(task) { %>
+        <a href="/tasks/<%= task.id %>"><p><%= task.name %></p></a>
+        <a href="/tasks/edit/<%= task.id %>">Editar</a>
+        <a href="/tasks/delete/<%= task.id %>">Eliminar</a>
+    <%})%>
+</body>
+</html>
