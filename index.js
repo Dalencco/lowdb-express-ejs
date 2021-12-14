@@ -1,5 +1,5 @@
-const app = require('./server')
-const { createConnection } = require('./database')
+const app = require('./src/server')
+const { createConnection } = require('./src/database')
 
 createConnection();
 app.set('port', process.env.PORT || 3000);
